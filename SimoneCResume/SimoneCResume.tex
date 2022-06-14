@@ -1,0 +1,259 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PlushCV - One Page Two Column Resume
+% LaTeX Template
+% Version 1.0 (11/28/2021)
+%
+% Author:
+% Shubham Mazumder (http://mazumder.me)
+%
+% Hacked together from:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add more icon options 
+% 4. Fix hacky left alignment on contact line
+% 5. Remove Hacky fix for awkward extra vertical space
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Icons:
+%%Main: https://icons8.com/icons/carbon-copy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{plushcv}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Simone}{Caldarella}{Student Intern @ SISLab}{\contactline{\href{https://www.github.com/simonecaldarella}{SimoneCaldarella}}{\href{https://www.linkedin.com/in/simone-caldarella-16930b16a/}{SC}}{\href{mailto:simone.caldarella98@gmail.com}{simone.caldarella98@gmail.com}}{\href{tel:+39 3884495671}{+39 3884495671}}}
+
+% \namesection{Firstname}{Lastname}{Full Stack Software Engineer}{\contactline{\href{https://www.mazumder.me}{mazumder.me}}{\href{https://www.github.com/sansquoi}{sansquoi}}{\href{https://www.linkedin.com/mazumders}{mazumders}}{\href{mailto:shubham.mazumder@gmail.com}{first.last@email.com}}{\href{tel:+1999999999}{9999999999}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.70\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\runsubsection{Artificial Intelligence Systems}
+\descript{| M.Sc. }
+\location{October 2020 – Current | University of Trento, Italy}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\sectionsep
+\item Language: English
+\item Computer Vision specialization
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Information Engineering and Computer Science}
+\descript{| B.Sc. }
+\location{July 2017 – September 2020 | University of Brescia, Italy}
+\begin{tightemize}
+\sectionsep
+\item Thesis: "DeepFake: a technological evolution with use cases between threats and opportunities"
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\runsubsection{Open Domain Aspect Based Sentimet Analysis}
+\descript{| NLP}
+\location{Two-stage Target/Aspect Based Sentiment Analysis Model}
+\begin{tightemize}
+\item Target extraction model and Polarity classification model developed using Bert as backbone
+\item Language and libraries: Python, Transformers, PyTorch, NumPy, Matplotlib
+\item Github repository: \href{https://github.com/SimoneCaldarella/ABSA_Project}{ABSA}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Person Attribute Recognition and Re-Identification}
+\descript{| Deep Learning}
+\location{Pipeline with a multi-label multi-class CNN for Person AR and a Siamese CNN for Person Re-ID}
+\begin{tightemize}
+\item Custom CNN models developed using ResNet18 as backbone, followed by custom classifiers and module. Techniques to deal with data unbalancing employed (Balanced Cross Entropy, Focal Loss)
+\item Language and libraries: Python, PyTorch, TensorBoard, Matplotlib, NumPy, Matplotlib
+\end{tightemize}
+\sectionsep
+
+\runsubsection{HandMouse}
+\descript{| Image Processing}
+\location{Hand tracking detection algorithm using laptpot's RGB camera}
+\begin{tightemize}
+\item Custom background substraction algorithm combined with "Good Features to tracks" as relevant hand keypoints and convex hull computation
+\item Languages and libraries: Python, OpenCV, NumPy, Tkinter
+\item Github repository:
+\href{https://github.com/SimoneCaldarella/HandMouse}{HandMouse}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{RobotIEEE}
+\descript{| App Development}
+\location{Android app for communications between SumoRobot and a planning algorithm online, developed for IEEE Metrology for Industry 4.0 and IoT}
+\begin{tightemize}
+\item Android App developed to receive instructions from a server via http requests, parse them and send them to the SumoRobot via bluetooth protocol
+\item Languages and libraries: Java, Android, AndroidStudio, Bluetooth, HTTPUrlConnection
+\item Github repository:
+\href{https://github.com/SimoneCaldarella/robotieeeApp/}{RobotIEEE}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{YouCantSeeMe}
+\descript{| Low Level Programming}
+\location{Steganography algorithm developed using only C for audio and images}
+\begin{tightemize}
+\item BMP images and WAV audio parsing algorithm developed to find the best bits in encoding to hide a secret message, without modifying aspect of the file.
+\item Language and libraries: C
+\item Github repository:
+\href{https://github.com/SimoneCaldarella/YouCantSeeMe}{YouCantSeeMe}
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2020	     & Finalist & Lorem Ipsum\\
+% 2018	     & $2^{nd}$ & Dolor Sit Amet\\
+% 2015	     & Finalist  & Cras posuere\\
+% \\
+% \end{tabular}
+% \sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.25\textwidth} 
+
+\section{Achievements} 
+\subsection{Chairman}
+\descript{Chairmanship in IEEE Student Branch of Brescia}
+\location{2018-2019}
+\sectionsep
+
+\subsection{Judge and Mentor}
+\descript{Judge and Mentor of Nasa Space Apps challenge Brescia}
+\location{2019}
+\sectionsep
+
+\subsection{IEEEXtreme 1° Place in Italy }
+\descript{1° Place in Italy at International Hackathon organised by IEEE}
+\location{2018}
+\sectionsep
+
+\section{Experience} 
+\subsection{Internship @ SISLab}
+\descript{University of Trento | DISI}
+\location{Jan 2022 - Present}
+Development of Dialogue Responses Generation models
+
+\section{Certificate} 
+\subsection{IELTS - {\normalfont 6.5 | 9/2020}}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\sectionsep
+Python \textbullet{} Java \textbullet{} C \textbullet{} \LaTeX \\ Shell \textbullet{} Matlab \\
+\sectionsep
+\sectionsep
+
+\subsection{Libraries/Frameworks}
+\sectionsep
+PyTorch \textbullet{} HuggingFace \textbullet{} SpaCy \textbullet{} Matplotlib \\ OpenCV
+\textbullet{} NumPy \\ 
+\sectionsep
+\sectionsep
+
+\subsection{Tools/Platforms}
+\sectionsep
+Git \textbullet{} Github \textbullet{} Android Studio \\ Docker \textbullet{} Overleaf \textbullet{} Excel \\
+\sectionsep
+\sectionsep
+
+\subsection{Fields of Interest}
+\sectionsep
+Deep Learning \textbullet{} Machine Learning \textbullet{} Computer Vision \\ NLP \textbullet{} Statistics \textbullet{} Calculus \\ Software Engineering
+\sectionsep
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     REFERENCES
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+
+% \subsection{Graduate}
+% Graduate Algorithms \textbullet{}\\ 
+% Advanced Computer Architecture \textbullet{}\\ 
+% Operating Systems \textbullet{}\\ 
+% Artificial Intelligence \textbullet{}\\
+% Visualization For Scientific Data \\
+% \sectionsep
+
+% \subsection{Undergraduate}
+
+% Database Management Systems \textbullet{}\\
+% Object Oriented Analysis and Design \textbullet{}\\
+% Artificial Intelligence and Expert Systems \textbullet{}\\
+% Scripting Languages and Web Tech \textbullet{}\\
+% Software Engineering \\
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+
